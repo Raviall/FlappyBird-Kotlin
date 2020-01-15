@@ -2,7 +2,7 @@ package com.example.flappybird.UI
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.flappybird.R
+
 
 class PlayActivity : AppCompatActivity() {
 

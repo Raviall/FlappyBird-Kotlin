@@ -1,6 +1,7 @@
 package com.example.flappybird.UI
 
 import android.content.Context
+import android.view.MotionEvent
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import com.example.flappybird.Thread.PlayThread
@@ -43,5 +44,14 @@ class PlayView(context: Context?) : SurfaceView(context), SurfaceHolder.Callback
         }else{
             playThread!!.start()
         }
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        val ev = event!!.action
+        if(ev == MotionEvent.ACTION_DOWN){
+            //Fly, you fool!
+            playThread?.Jump()
+        }
+        return true
     }
 }
